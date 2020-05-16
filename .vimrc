@@ -51,7 +51,7 @@ function AddTitle()
     call append(0,"\#!/bin/sh")
     call append(1,"# *********************************")
     call append(2,"# Author        : seaice6")
-    call append(3,"# Last modified : ".strftime("%Y-%m-%d %H:%M"))
+    call append(3,"# Last modified : ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(4,"# Email         : lhb16@outlook.com")
     call append(5,"# Filename      : ".expand("%:t"))
     call append(6,"# Description   : ")
@@ -62,7 +62,7 @@ endfunction
 
 function UpdateTitle()
     normal m'
-    execute '/# Last modified/s@:.*$@\=strftime("%Y-%m-%d %H:%M")@'
+    execute '/# Last modified/s@:.*$@\=strftime("%Y-%m-%d %H:%M:%S")@'
     normal''
     normal mk
     execute '/# Filename/s@:.*$@\=":\t".expand("%:t")@'

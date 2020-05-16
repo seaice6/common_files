@@ -25,5 +25,6 @@ alias vvm="g ~/.vimrc"
 alias png="eog"             ## eog | xdg-open | gio open
 alias g="gvim"
 
-echo -ne "Hello,$NICKNAME! It's "; date '+%A, %B %-d %Y'
+#echo -ne "Hello,$NICKNAME! It's "; date '+%A, %B %-d %Y %H:%M'
+echo -ne "Hello,$NICKNAME! It's "; date '+%Y年%b%d日 %A %H:%M:%S'
 source /etc/profile
